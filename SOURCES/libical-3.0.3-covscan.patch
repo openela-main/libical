@@ -1,0 +1,11 @@
+diff -up libical-3.0.3/src/libical-glib/tools/generator.c.covscan libical-3.0.3/src/libical-glib/tools/generator.c
+--- libical-3.0.3/src/libical-glib/tools/generator.c.covscan	2018-07-19 15:53:11.291351554 +0200
++++ libical-3.0.3/src/libical-glib/tools/generator.c	2018-07-19 15:53:25.200351362 +0200
+@@ -1142,7 +1142,6 @@ void generate_forward_declarations_heade
+         if (c == '$') {
+             if ((c = fgetc(in)) != '{' && c != '^') {
+                 printf("The following char is not {");
+-                g_free (buffer);
+                 fclose(in);
+                 fclose(out);
+                 return;
